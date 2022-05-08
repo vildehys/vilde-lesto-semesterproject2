@@ -1,0 +1,80 @@
+img {
+    height: 300px;
+}
+.container_products {
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-rows: repeat;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    margin-top: 7rem;
+    text-align: left;
+    margin-left: 3%;
+    margin-right: 3%;
+
+}
+
+.inline {
+    display: flex;
+    flex-direction: row;
+    align-items:baseline;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+  .read-button {
+    border: solid #67697C 3px;
+    display: block;
+    text-align: center;
+    padding: 7px;
+    text-decoration: none;
+    color: #323031;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight:bold;
+    margin-top: 50px;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+.search-test {
+    border-radius: 30px;
+    border:none;
+    opacity: 75%;
+    padding: 13px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+/*.search-bar {
+      background-color: #D3B9AA;
+      padding: 30px;
+}*/
+
+
+.container-image {
+    background: url(img/pexels-aleksandar-pasaric-1323712.jpg);
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.container-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+
+}
+

@@ -1,0 +1,30 @@
+.container_news {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.grid_news {
+    padding: 20px;
+
+}
+
+.img_news {
+    height: 200px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.grid_news__text {
+    text-align: center;
+
+
+}
+
+@media (min-width: 992px) {
+    .container_news {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+
+}
