@@ -54,8 +54,3 @@ function createHtml(specifics) {
 
     
 }
-
-
-                                
-
-    
