@@ -16,14 +16,56 @@
 
 .grid_news__text {
     text-align: center;
-
-
 }
+
+.hero-img {
+    background-size: contain;
+    width: 100%;
+}
+
+.hero-banner {
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    font-size: 50px;
+}
+
+.newsletter {
+    padding: 75px;
+    background-color: #f7f7f7;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.newsletter i {
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: #A97455;
+}
+
+
+.featured-images {
+    background-color: green;
+    padding: 50px;
+    margin-bottom: 100px;
+}
+
 
 @media (min-width: 992px) {
     .container_news {
         width: 70%;
         margin: 0 auto;
+    }
+
+    .hero-img {
+        height: 600px;
     }
 
 

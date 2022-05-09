@@ -10,8 +10,8 @@
 
 .navbar {
     background-color: white !important;
-    margin-left: 3%;
-    margin-right: 3%;
+    max-width: 1320px;
+    margin: 0 auto;
 }
 
 

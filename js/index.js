@@ -1,37 +1,6 @@
-/*const url = "https://semester-project-ii.herokuapp.com/home";
-const productsContainer = document.querySelector(".container");
 
-async function getProducts(url) {
-  try {
-    const response = await fetch(url);
-    const products = await response.json();
-    console.log(products)
-
-
-    function createHTML(product) {
-
-        productsContainer.innerHTML += 
-        `
-        <div class="products">
-        <h2>${product.hero_banner}</h2>  
-        </div>`;
-     };
-
-  } catch (err) {
-      console.error(err);
-  }
-
-    
-}
-
-getProducts(url);
-
-*/
-
-
-
-/*const url = "https://semester-project-ii.herokuapp.com/home/";
-const containerCards = document.querySelector(".container");
+const url = "https://semester-project-ii.herokuapp.com/home/";
+const containerCards = document.querySelector(".background");
 
 async function fetchDetails() {
 
@@ -59,15 +28,18 @@ fetchDetails()
 function createHtml(specifics) {
 
   containerCards.innerHTML = `
-  <div class="product-images">
-  <img src=${specifics.id}/>
+  <div class="hero-banner">
+  <img src=${specifics.hero_banner.url} class="hero-img">
+  <div class="hero-content">
+  <p class="hero-text">Hello</p>
+  </div>
+  </div>
 
 `;
                               
 
-  
+
 }
 
 
 
-*/

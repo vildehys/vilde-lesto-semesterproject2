@@ -3,14 +3,15 @@ img {
 }
 .container_products {
     display: grid;
-    grid-gap: 5rem;
+    grid-gap: 7rem;
     grid-template-rows: repeat;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-items: center;
     margin-top: 7rem;
     text-align: left;
     margin-left: 3%;
     margin-right: 3%;
+
 
 }
 
@@ -63,7 +64,7 @@ h3 {
 .container-image {
     background: url(img/pexels-aleksandar-pasaric-1323712.jpg);
     background-size: cover;
-    height: 500px;
+    height: 600px;
     position: relative;
 
 }

@@ -2,8 +2,15 @@
 
 * {
     font-family: 'Open Sans', sans-serif;
-    color: #323031;
+    
 }
+
+.main-content {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+
 
 
     
