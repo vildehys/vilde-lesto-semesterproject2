@@ -17,8 +17,8 @@ async function getProducts(url) {
         <p>${product.price}</p>
         <i class="fa fa-heart"></i>
         </div>
-        <div-class="button">
-        <a class="read-button" href="detail.html?id=${product.id}">Read More</a>
+        <div class="button">
+        <a class="button read-button" href="detail.html?id=${product.id}">Read More</a>
         </div
         </div>`;
      });

@@ -1,0 +1,31 @@
+.navbar {
+    background-color: $color-primary !important;
+    max-width: 1320px;
+    margin: 0 auto;
+
+    .navbar-brand {
+        font-family: $font-secondary;
+        font-size: 50px;
+    }
+    
+}
+
+.banner {
+    margin: 0;
+    background-color: $color-secondary !important;
+    text-align: center;
+    padding: 10px;
+    color: $color-primary;
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+

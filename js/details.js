@@ -43,7 +43,7 @@ function createHtml(specifics) {
         <i class="fa-solid fa-star"></i>
         <i class="fa-solid fa-star-half-stroke"></i>
         <div class="button">
-        <a class="cart-button" href="cart.html">Add to cart</a>
+        <a class="button cart-button" href="cart.html">Add to cart</a>
         </div>
         </div>
 

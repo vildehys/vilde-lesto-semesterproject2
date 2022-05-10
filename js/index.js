@@ -30,9 +30,6 @@ function createHtml(specifics) {
   containerCards.innerHTML = `
   <div class="hero-banner">
   <img src=${specifics.hero_banner.url} class="hero-img">
-  <div class="hero-content">
-  <p class="hero-text">Hello</p>
-  </div>
   </div>
 
 `;
