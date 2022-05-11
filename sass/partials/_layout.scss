@@ -27,6 +27,7 @@
     color: $color-font;
     font-weight: 600;
     margin-top: 10px;
+    font-size: 15px;
 
 }
 
@@ -38,5 +39,24 @@
 .button a:hover {
     border: solid $color-icon 3px;
     color: $color-primary;
+
+}
+
+
+.cta-cart {
+    padding: 20px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: red;
+    height: 30px;
+}
+
+.delete {
+
+    padding: 20px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: blue;
+    height: 30px;
 
 }

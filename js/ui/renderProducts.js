@@ -11,7 +11,7 @@ export function renderProducts(productsToRender) {
                                         <h2>ENVIRON À PARIS</h2>
                                         <h3>${product.title}</h3>
                                         <div class="inline">      
-                                        <p>${product.price}</p>
+                                        <p>${product.price} kr</p>
                                         <i class="fa fa-heart"></i>
                                         </div>
                                         <div class="button">

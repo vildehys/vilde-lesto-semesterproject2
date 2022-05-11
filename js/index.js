@@ -1,42 +1,87 @@
+import { homeUrl } from "../js/data/api.js";
+import { productsUrl } from "../js/data/api.js";
 
-const url = "https://semester-project-ii.herokuapp.com/home/";
-const containerCards = document.querySelector(".background");
 
-async function fetchDetails() {
+
+
+const containerBanner = document.querySelector(".background");
+
+async function fetchBanner() {
 
     try {
         
-    const response = await fetch(url);
+    const response = await fetch(homeUrl);
     const specifics = await response.json();
     
-
-    console.log(specifics);
-
-    createHtml(specifics);
-
-
+    heroBanner(specifics);
 }
+
 
 catch(error) {
     console.log(error);
-    containerCards.innerHTML = message("error", error);
+    containerBanner.innerHTML = message("error", error);
     }
 }
 
-fetchDetails()
+fetchBanner()
 
-function createHtml(specifics) {
 
-  containerCards.innerHTML = `
+function heroBanner(specifics) {
+
+  containerBanner.innerHTML = `
   <div class="hero-banner">
   <img src=${specifics.hero_banner.url} class="hero-img">
   </div>
 
-`;
-                              
-
+`;                           
 
 }
+
+
+
+
+async function featuredProducts() {
+
+  try {
+
+    const response = await fetch(productsUrl);
+    const products = await response.json();
+    const featuredContainer = document.querySelector(".featured-container");
+
+    if(featuredProducts) {
+      for (var i = 0; i < products.length; i++) {
+          if(products[i].featured === true) {
+              featuredContainer.innerHTML += `<div class="featured_products">
+                                                  <div class="featured_product">
+                                                    <img src=${products[i].image.url} class="product-image"/>
+                                                    <div class="featured_text">
+                                                    <h2>${products[i].title}<h2>
+                                                    <p>${products[i].description}<p>
+                                                    <h6>${products[i].price}kr<h6>
+                                                    <div class="button">
+                                                    <a class="button read-button" href="detail.html?id=${products[i].id}">Read</a>
+                                                    </div>
+                                                    </div>
+                                                  </div>
+                                              </div>`
+          };
+      };
+  } 
+
+
+  }
+
+  catch(error) {
+    console.log(error);
+    containerBanner.innerHTML = message("error", error);
+    }
+
+  }
+
+  featuredProducts();
+
+
+
 
 
 

@@ -10,7 +10,7 @@ search.onkeyup = function() {
   const searchValue = event.target.value.trim().toLowerCase();
 
   const filteredProducts = products.filter(function(product) {
-    if(product.title.toLowerCase().startsWith(searchValue)) {
+    if (product.title.toLowerCase().startsWith(searchValue)) {
       return true;
     }
   })

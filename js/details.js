@@ -1,41 +1,73 @@
-const containerCards = document.querySelector(".container");
+import { productsUrl } from "../js/data/api.js";
+import { getExistingFavs } from "../js/utils/products/favFunctions.js"
+
+
+const singleProduct = document.querySelector(".container");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-const url = "https://semester-project-ii.herokuapp.com/products/";
+const url = productsUrl + id;
+
+
+const favourites = getExistingFavs();
 
 
 async function fetchDetails() {
 
     try {
         
-
-    const response = await fetch(url + id);
-
+    const response = await fetch(url);
     const specifics = await response.json();
-    
 
-    console.log(specifics);
 
-    createHtml(specifics);
+
+
+    productDetails(specifics);
 
 }
 
-catch(error) {
-    console.log(error);
-    }
+    catch(error) {
+        console.log(error);
+        }
 }
+
 
 fetchDetails()
 
-function createHtml(specifics) {
 
-    containerCards.innerHTML = `
+function productDetails(specifics) {
+    let cssClass = "cta-cart";
+    let btnText = "Add to cart";
+
+    //check through favourites array
+    // does the product id exist in the favourites array?
+
+    const doesObjectExist = favourites.find(function (fav) {
+        console.log(fav);
+
+        return parseInt(fav.id) === specifics.id;
+    });
+
+    console.log(doesObjectExist);
+
+
+    // if id is in the array, change style of button
+
+    if(doesObjectExist) {
+        cssClass = "delete";
+        btnText = "Remove from cart";
+
+    }
+
+
+
+    singleProduct.innerHTML = `
+
         <div class="product">
         <img src="${specifics.image.url}" class="product-image"/>
         <div class="text">
         <h2>${specifics.title}</h2>
-        <h3>${specifics.price}</h3>
+        <h3>${specifics.price} kr</h3>
         <p>${specifics.description}</p>
         <i class="fa-solid fa-star"></i>
         <i class="fa-solid fa-star"></i>
@@ -43,14 +75,71 @@ function createHtml(specifics) {
         <i class="fa-solid fa-star"></i>
         <i class="fa-solid fa-star-half-stroke"></i>
         <div class="button">
-        <a class="button cart-button" href="cart.html">Add to cart</a>
+        <button class="cta-cart ${cssClass}" data-id="${specifics.id}" data-title="${specifics.title}" data-price="${specifics.price}" data-description="${specifics.description}">${btnText}</button>
+
         </div>
         </div>
-
-
     </div>
 `;
-                                
 
-    
+
+
+
+const favButtons = document.querySelectorAll(".product button");
+
+favButtons.forEach((button) => {
+    button.addEventListener("click", handleClick);
+
+});
+
+function handleClick() {
+
+    const id = this.dataset.id;
+    const title = this.dataset.title;
+
+
+
+    const currentFavs = getExistingFavs();
+
+
+    const productExists = currentFavs.find(function(fav) {
+        return fav.id === id;
+
+    });
+
+    if (!productExists) {
+
+        const product = {id: id, title: title};
+        currentFavs.push(product);
+        saveFavs(currentFavs);
+    }
+    else {
+
+        const newFavs = currentFavs.filter(fav => fav.id !== id);
+        saveFavs(newFavs);
+
+    }
+  
+
 }
+
+}
+
+
+
+function saveFavs(favs) {
+    localStorage.setItem("favourites", JSON.stringify(favs));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
