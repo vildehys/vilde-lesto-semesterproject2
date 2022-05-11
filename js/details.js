@@ -75,7 +75,7 @@ function productDetails(specifics) {
         <i class="fa-solid fa-star"></i>
         <i class="fa-solid fa-star-half-stroke"></i>
         <div class="button">
-        <button class="cta-cart ${cssClass}" data-id="${specifics.id}" data-title="${specifics.title}" data-price="${specifics.price}" data-description="${specifics.description}">${btnText}</button>
+        <button class="button cta-cart ${cssClass}" data-id="${specifics.id}" data-title="${specifics.title}" data-price="${specifics.price}" data-description="${specifics.description}">${btnText}</button>
 
         </div>
         </div>
@@ -96,6 +96,9 @@ function handleClick() {
 
     const id = this.dataset.id;
     const title = this.dataset.title;
+    const price = this.dataset.price;
+    const description = this.dataset.description;
+    const image = this.dataset.image;
 
 
 
@@ -109,7 +112,7 @@ function handleClick() {
 
     if (!productExists) {
 
-        const product = {id: id, title: title};
+        const product = {id: id, title: title, price: price, description: description, image: image};
         currentFavs.push(product);
         saveFavs(currentFavs);
     }

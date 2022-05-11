@@ -60,20 +60,25 @@
   color: #ffff;
 }
 
-.cta-cart {
-  padding: 20px;
+.cta-cart, .delete {
+  border-style: none;
   width: 100%;
-  border-radius: 5px;
-  background-color: red;
-  height: 30px;
+  border: solid #67697C 3px;
+  background-color: white;
+  padding: 7px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.cta-cart:hover {
+  border: solid #A97455 3px;
+  color: #ffff;
 }
 
 .delete {
-  padding: 20px;
-  width: 100%;
-  border-radius: 5px;
-  background-color: blue;
-  height: 30px;
+  color: white;
+  background-color: red;
+  border-color: red;
 }
 
 .container_products {

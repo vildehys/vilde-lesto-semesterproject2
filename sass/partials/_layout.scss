@@ -43,20 +43,28 @@
 }
 
 
-.cta-cart {
-    padding: 20px;
+.cta-cart, .delete {
+    border-style: none;
     width: 100%;
-    border-radius: 5px;
-    background-color: red;
-    height: 30px;
+    border: solid $color-secondary 3px;
+    background-color: white;
+    padding: 7px;
+    font-weight: 600;
+    font-size: 15px;
+
+
+
+}
+
+.cta-cart:hover {
+    border: solid $color-icon 3px;
+    color: $color-primary;
+
 }
 
 .delete {
-
-    padding: 20px;
-    width: 100%;
-    border-radius: 5px;
-    background-color: blue;
-    height: 30px;
-
+    color: white;
+    background-color: red;
+    border-color: red;
 }
+
