@@ -1,7 +1,7 @@
 const url = "https://semester-project-ii.herokuapp.com/products";
 const productsContainer = document.querySelector(".container_products");
 
-async function getProducts(url) {
+export async function getProducts(url) {
   try {
     const response = await fetch(url);
     const products = await response.json();
@@ -22,6 +22,12 @@ async function getProducts(url) {
         </div
         </div>`;
      });
+
+
+const cartButton = document.querySelectorAll(".product a");
+
+console.log(cartButton);
+
   } catch (err) {
       console.error(err);
   }
@@ -29,3 +35,7 @@ async function getProducts(url) {
 }
 
 getProducts(url);
+
+
+
+
