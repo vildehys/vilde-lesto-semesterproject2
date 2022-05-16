@@ -81,6 +81,7 @@ function productDetails(specifics) {
 `;
 
 
+console.log(specifics.image.url);
 
 
 const favButtons = document.querySelectorAll(".product button");
@@ -100,10 +101,10 @@ function handleClick() {
 
 
 
-    const currentFavs = getExistingProducts();
+    const currentProducts = getExistingProducts();
 
 
-    const productExists = currentFavs.find(function(fav) {
+    const productExists = currentProducts.find(function(fav) {
         return fav.id === id;
 
     });
@@ -111,13 +112,13 @@ function handleClick() {
     if (!productExists) {
 
         const product = {id: id, title: title, price: price, description: description, image: image};
-        currentFavs.push(product);
-        saveFavs(currentFavs);
+        currentProducts.push(product);
+        saveFavs(currentProducts);
     }
     else {
 
-        const newFavs = currentFavs.filter(fav => fav.id !== id);
-        saveFavs(newFavs);
+        const newProducts = currentProducts.filter(fav => fav.id !== id);
+        saveFavs(newProducts);
 
     }
   
