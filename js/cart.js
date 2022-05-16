@@ -1,21 +1,21 @@
-import { getExistingFavs } from "../js/utils/products/favFunctions.js"
+import { getExistingProducts } from "../js/utils/products/favFunctions.js"
 
-const favourites = getExistingFavs();
+const products = getExistingProducts();
 
 
 const productContainer = document.querySelector(".product-container");
 
-if(favourites.length === 0) {
+if(products.length === 0) {
     productContainer.innerHTML = "Your cart is empty. Continue shopping!";
 }
 
-favourites.forEach((favourite) => {
+products.forEach((product) => {
     productContainer.innerHTML += `<div class="product">
-                                    <img class=${favourite.image}> 
-                                    <h4>${favourite.title}</h4>
-                                    <h4>${favourite.price}</h4>
-                                    <p>${favourite.description}</p>
-                                    <p>${favourite.id}</p>
+                                    <img src="${product.image}">
+                                    <h4>${product.title}</h4>
+                                    <h4>${product.price}</h4>
+                                    <p>${product.description}</p>
+                                    <p>${product.id}</p>
                                     </div>`;
 
 });
