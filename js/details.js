@@ -1,5 +1,5 @@
 import { productsUrl } from "../js/data/api.js";
-import { getExistingFavs } from "../js/utils/products/favFunctions.js"
+import { getExistingProducts } from "../js/utils/products/favFunctions.js"
 
 
 const singleProduct = document.querySelector(".container");
@@ -9,7 +9,7 @@ const id = params.get("id");
 const url = productsUrl + id;
 
 
-const favourites = getExistingFavs();
+const favourites = getExistingProducts();
 
 
 async function fetchDetails() {
@@ -62,7 +62,6 @@ function productDetails(specifics) {
 
 
     singleProduct.innerHTML = `
-
         <div class="product">
         <img src="${specifics.image.url}" class="product-image"/>
         <div class="text">
@@ -76,7 +75,6 @@ function productDetails(specifics) {
         <i class="fa-solid fa-star-half-stroke"></i>
         <div class="button">
         <button class="button cta-cart ${cssClass}" data-id="${specifics.id}" data-title="${specifics.title}" data-price="${specifics.price}" data-description="${specifics.description}">${btnText}</button>
-
         </div>
         </div>
     </div>
@@ -102,7 +100,7 @@ function handleClick() {
 
 
 
-    const currentFavs = getExistingFavs();
+    const currentFavs = getExistingProducts();
 
 
     const productExists = currentFavs.find(function(fav) {
@@ -133,15 +131,6 @@ function handleClick() {
 function saveFavs(favs) {
     localStorage.setItem("favourites", JSON.stringify(favs));
 }
-
-
-
-
-
-
-
-
-
 
 
 

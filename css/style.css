@@ -301,7 +301,7 @@ p {
   }
 }
 
-.main-content .form {
+.main-content #contactForm {
   padding: 20px;
   max-width: 900px;
   margin: 0 auto;
@@ -313,17 +313,17 @@ p {
           box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.main-content .form .form-floating {
+.main-content #contactForm .form-floating {
   max-width: 600px;
   margin: 0 auto;
 }
 
-.main-content .form .form-heading_text {
+.main-content #contactForm .form-heading_text {
   font-size: 28px;
   margin-bottom: 50px;
 }
 
-.main-content .form .form-heading_logo {
+.main-content #contactForm .form-heading_logo {
   font-size: 36px;
   font-weight: 100;
   font-family: "dancing script", cursive;
@@ -336,5 +336,12 @@ p {
 
 .main-content .form-link a {
   color: #323031;
+}
+
+.form-error {
+  display: none;
+  color: red;
+  font-size: 1rem;
+  margin-top: 10px;
 }
 /*# sourceMappingURL=style.css.map */
