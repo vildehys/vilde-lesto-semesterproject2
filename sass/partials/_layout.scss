@@ -37,7 +37,7 @@
 }
 
 .button a:hover {
-    border: solid $color-icon 3px;
+    border-color: $color-icon;
     color: $color-primary;
 
 }
@@ -67,4 +67,26 @@
     background-color: red;
     border-color: red;
 }
+
+.read-button {
+
+    border: solid $color-secondary 3px;
+    display: block;
+    text-align: center;
+    padding: 7px;
+    text-decoration: none;
+    color: $color-font;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 15px;
+
+}
+
+.read-button:hover {
+    color: $color-primary;
+    border-color: $color-icon;
+
+}
+
+
 

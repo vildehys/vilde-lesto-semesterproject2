@@ -1,17 +1,10 @@
-import { baseUrl } from "./data/api.js"
+import { productsUrl } from "./data/api.js"
 import displayMessage from "./utils/displayMessage.js";
 
 const queryString = document.location.search;
-
 const params = new URLSearchParams(queryString);
-
 const id = params.get("id");
-
-if (!id) {
-    document.location.href = "/";
-}
-
-const productUrl = baseUrl + "/products/" + id;
+const url = productsUrl + id;
 
 const form = document.querySelector("form");
 const name = document.querySelector("#title");
@@ -22,15 +15,23 @@ const message = document.querySelector(".message-container");
 
 (async function() {
     try {
-        const response = await fetch(productUrl);
+        const response = await fetch(productsUrl);
         const details = await  response.json();
+
+        title.value = details.title;
+        price.value = details.price;
+        description.value = details.description;
+        idInput.value = details.id;
 
         console.log(details)
 
     }
     catch(error) {
-        console.log(error)
+        console.log(error);
 
     }
 
+
 })();
+
+

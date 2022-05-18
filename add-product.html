@@ -41,10 +41,7 @@
                   <a class="nav-link active" aria-current="page" href="add-product.html">Add products</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="edit-product.html">Edit products</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="delete-product.html">Delete products</a>
+                  <a class="nav-link active" aria-current="page" href="admin.html">Products overview</a>
                 </li>
               </ul>
 
@@ -54,23 +51,25 @@
     </header>
 
     <div class="main-content">
-        <div class="container">
-            <h1>Add Product</h1>
 
-            <form>
+        <div class="container">
+
+            <form class="add-product">
+              <h2 class="form-heading_logo">Environ</h2>
+              <h1 class="form-heading_text">Add product</h1>
                 <div class="message-container"></div>
 
                 <div>
-                    <label for="title">Title</label>
-                    <input id="title" />
+                    <label for="title"></label>
+                    <input id="title" placeholder="Title" />
                 </div>
                 <div>
-                    <label for="price">Price</label>
-                    <input id="price" />
+                    <label for="price"></label>
+                    <input id="price" placeholder="Price" />
                 </div>
                 <div>
-                    <label for="description">Description</label>
-                    <textarea id="description" ></textarea>
+                    <label for="description"></label>
+                    <textarea id="description" placeholder="Description" ></textarea>
                 </div>
                 <button>Add</button>
             </form>

@@ -56,7 +56,7 @@ async function doLogin(username, password) {
             saveToken(json.jwt);
             saveUser(json.user);
 
-            location.href="add-product.html"
+            location.href="admin.html"
 
 
         }

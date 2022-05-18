@@ -23,6 +23,10 @@
   color: white !important;
 }
 
+.banner .nav-item {
+  list-style: none;
+}
+
 @media (min-width: 992px) {
   .banner {
     display: -webkit-box;
@@ -32,6 +36,9 @@
         -ms-flex-pack: center;
             justify-content: center;
     text-decoration: none;
+  }
+  .banner ul {
+    list-style: none;
   }
 }
 
@@ -72,7 +79,7 @@
 }
 
 .button a:hover {
-  border: solid #A97455 3px;
+  border-color: #A97455;
   color: #ffff;
 }
 
@@ -95,6 +102,23 @@
   color: white;
   background-color: red;
   border-color: red;
+}
+
+.read-button {
+  border: solid #67697C 3px;
+  display: block;
+  text-align: center;
+  padding: 7px;
+  text-decoration: none;
+  color: #323031;
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.read-button:hover {
+  color: #ffff;
+  border-color: #A97455;
 }
 
 .container_products {
@@ -321,8 +345,7 @@ p {
   }
 }
 
-.main-content #contactForm {
-  padding: 20px;
+.add-product {
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
@@ -333,29 +356,32 @@ p {
           box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.main-content #contactForm .form-floating {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.main-content #contactForm .form-heading_text {
+.add-product .form-heading_text {
   font-size: 28px;
   margin-bottom: 50px;
 }
 
-.main-content #contactForm .form-heading_logo {
+.add-product .form-heading_logo {
   font-size: 36px;
   font-weight: 100;
   font-family: "dancing script", cursive;
 }
 
-.main-content .form-link {
-  font-size: 14px;
-  margin-top: 15px;
+.add-product input {
+  width: 300px;
+  margin-top: 10px;
+  padding: 7px;
 }
 
-.main-content .form-link a {
-  color: #323031;
+.add-product textarea {
+  width: 300px;
+  margin-top: 10px;
+  padding: 7px;
+}
+
+.add-product button {
+  margin-top: 20px;
+  width: 300px;
 }
 
 .form-error {
