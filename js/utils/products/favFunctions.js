@@ -1,11 +1,11 @@
 export function getExistingProducts() {
-    const favs = localStorage.getItem("favourites");
+    const products = localStorage.getItem("favourites");
 
-    if (!favs) {
+    if (!products) {
         return [];
     }
     else {
-        return JSON.parse(favs);
+        return JSON.parse(products);
 
 
     }
