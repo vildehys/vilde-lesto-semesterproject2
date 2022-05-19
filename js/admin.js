@@ -1,6 +1,7 @@
 import { adminProducts } from "./ui/adminProducts.js";
 import { displayMessage } from "./ui/displayMessage.js";
 import { productsUrl } from "../js/data/api.js";
+import logoutButton from "./ui/logoutButton.js";
 
 async function getProducts(productsUrl) {
   try {
@@ -18,3 +19,4 @@ async function getProducts(productsUrl) {
 }
 
 getProducts(productsUrl);
+logoutButton();

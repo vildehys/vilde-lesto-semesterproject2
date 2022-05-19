@@ -2,6 +2,7 @@ import { productsUrl } from "./data/api.js"
 import { getToken } from "./data/localStorage.js";
 import { displayMessage } from "./ui/displayMessage.js";
 import deleteProduct from "./utils/admin/deleteProduct.js";
+import logoutButton from "./ui/logoutButton.js";
 
 
 const queryString = document.location.search;
@@ -37,6 +38,8 @@ const message = document.querySelector(".message-container");
         console.log(error);
 
     }
+
+
 
 
 })();
@@ -95,11 +98,14 @@ async function updateProduct(title, price, description, id) {
 
 
         }
+
+
     }
     catch(error) {
         console.log(error);
 
     }
+
 
 
 }

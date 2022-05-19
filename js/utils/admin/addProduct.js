@@ -1,8 +1,6 @@
 import { displayMessage } from "../../ui/displayMessage.js";
 import { getToken } from "../../data/localStorage.js";
-import { baseUrl } from "../../data/api.js";
 import { productsUrl } from "../../data/api.js";
-
 
 
 const form = document.querySelector("form");
@@ -75,4 +73,6 @@ async function addProduct(title, price, description) {
         displayMessage("error", "An error has occured", ".message-container");
 
     }
+
+
 }
