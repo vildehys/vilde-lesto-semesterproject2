@@ -1,4 +1,4 @@
-import { getExistingProducts } from "../js/utils/products/favFunctions.js"
+import { getExistingProducts } from "./utils/products/getExistingProducts";
 
 const productsInCart = getExistingProducts();
 console.log(productsInCart);

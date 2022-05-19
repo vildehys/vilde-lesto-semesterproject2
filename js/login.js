@@ -1,7 +1,6 @@
-import displayMessage from "../js/utils/displayMessage.js";
+import { displayMessage } from "./ui/displayMessage.js";
 import { baseUrl } from "../js/data/api.js";
-import { saveToken, saveUser} from "../js/utils/localStorage.js";
-
+import { saveToken, saveUser } from "./data/localStorage.js";
 
 
 const form = document.querySelector("form");

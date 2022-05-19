@@ -1,5 +1,5 @@
 import { productsUrl } from "../js/data/api.js";
-import { getExistingProducts } from "../js/utils/products/favFunctions.js"
+import { getExistingProducts } from "../js/utils/products/existingProducts.js"
 
 
 const singleProduct = document.querySelector(".container");

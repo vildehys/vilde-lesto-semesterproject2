@@ -12,7 +12,6 @@ export function adminProducts(productsForAdmin) {
                                         <h3>${product.title}</h3>
                                         <p>${product.price} kr</p>
                                         <a class="button read-button" href="edit-product.html?id=${product.id}">Edit Product</a>
-                                        <a class="button read-button">Delete Product</a>
                                         </div
                                         </div>`;
 
