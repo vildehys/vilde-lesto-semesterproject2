@@ -1,5 +1,5 @@
 import { renderProducts } from "./ui/renderProducts.js";
-import { filterProducts } from "./ui/filterProducts.js";
+import { filterProducts } from "./ui/filterProducts.js"
 import { displayMessage } from "./ui/displayMessage.js";
 import { productsUrl } from "../js/data/api.js";
 

@@ -11,19 +11,24 @@ if(productsInCart.length === 0) {
 
 productsInCart.forEach((product) => {
 
-    productContainer.innerHTML += `<div class="cart-content">
-                                    <div class="cart-header">
-                                    <p>ProductsInCart<p>
-                                    <p>Qty<p>
-                                    <p>Price<p>
-                                    </div>
-                                    <div class="cart-productsInCart">
-                                    <img src="${product.image}" class="cart-image">
-                                    <h4>${product.title}</h4>
-                                    <h4>${product.price}kr</h4>
-                                    </div>
+    productContainer.innerHTML += `   
+                                    <div class="cart-content">
+                                         <div class="cart-header">
+                                            <p>Products In Cart<p>
+                                            <p>Qty<p>
+                                            <p>Price<p> 
+                                        </div>
+
+                                        <div class="cart-productsInCart">
+                                            <img src="${product.image}" class="cart-image">
+                                            <h4>${product.title}</h4>
+                                            <h4>${product.price}kr</h4>
+                                            </div>
+                                            
                                     </div>`;
 
 });
+
+
 
  

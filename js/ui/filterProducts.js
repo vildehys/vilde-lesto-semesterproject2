@@ -5,8 +5,7 @@ export function filterProducts(products) {
   const search = document.querySelector(".search");
 
 search.onkeyup = function() {
-  //console.log(event);
-
+  console.log(event);
   const searchValue = event.target.value.trim().toLowerCase();
 
   const filteredProducts = products.filter(function(product) {
@@ -14,6 +13,7 @@ search.onkeyup = function() {
       return true;
     }
   })
+
 
 
 

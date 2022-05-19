@@ -4,6 +4,14 @@
     
 }
 
+button {
+    padding: 7px;
+    background-color: $color-primary;
+    border-style: none;
+    border: solid $color-secondary 3px;
+
+}
+
 .main-content {
     max-width: 1320px;
     margin: 0 auto;
@@ -86,6 +94,10 @@
     color: $color-primary;
     border-color: $color-icon;
 
+}
+
+.submit {
+    padding: 20px;
 }
 
 
