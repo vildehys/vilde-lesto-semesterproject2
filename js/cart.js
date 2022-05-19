@@ -1,4 +1,4 @@
-import { getExistingProducts } from "./utils/products/getExistingProducts";
+import { getExistingProducts } from "./utils/products/getExistingProducts.js";
 
 const productsInCart = getExistingProducts();
 console.log(productsInCart);
