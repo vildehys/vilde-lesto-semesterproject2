@@ -16,7 +16,7 @@ const message = document.querySelector(".message-container");
 (async function() {
     try {
         const response = await fetch(productsUrl);
-        const details = await  response.json();
+        const details = await response.json();
 
         title.value = details.title;
         price.value = details.price;
@@ -24,6 +24,9 @@ const message = document.querySelector(".message-container");
         idInput.value = details.id;
 
         console.log(details)
+
+        console.log(title.value);
+
 
     }
     catch(error) {
