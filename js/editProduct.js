@@ -28,6 +28,8 @@ const message = document.querySelector(".message-container");
         description.value = details.description;
         idInput.value = details.id;
 
+
+
         deleteProduct(details.id);
         
         console.log(details)
