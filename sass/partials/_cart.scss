@@ -1,45 +1,9 @@
-
-
-.cart-content {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    padding: 20px;
-
-    .cart-products {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 auto;
-    }
-
-    .cart-header {
-
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .cart-image {
-        height: 200px;
-       
-    }
-
-
-    h4{
-        margin-top: 20px;
-        font-size: 15px;
-    }
+.cart-content img {
+    height: 200px;
 }
 
-.price-container {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    max-width: 1320px;
-    margin-top: 20px;
-    background-color: $color-alt;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    padding: 20px;
-}
+
+
 
 
 
