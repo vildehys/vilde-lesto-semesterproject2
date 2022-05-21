@@ -12,7 +12,8 @@ if(productsInCart.length === 0) {
 
 productsInCart.forEach((product) => {
 
-    productContainer.innerHTML += ` 
+    productContainer.innerHTML += ` <div class="cart-content"
+
                                     <div class="container h-100">
                                 <div class="row d-flex justify-content-center align-items-center h-100">
                                     <div class="col">
@@ -29,7 +30,7 @@ productsInCart.forEach((product) => {
                                 <p class="lead fw-normal mb-0">${product.title}</p>                               
                                  </div>
                               </div>
-                              <div class="col-md-2 d-flex justify-content-center">
+                              <div class="col-md-3 d-flex justify-content-center">
                               <div>
                                 <p class="small text-muted mb-4 pb-2">Quantity</p>
                                 <p class="lead fw-normal mb-0">1</p>
@@ -44,18 +45,20 @@ productsInCart.forEach((product) => {
                           <div class="col-md-2 d-flex justify-content-center">
                           <div>
                             <p class="small text-muted mb-4 pb-2">Product</p>
-                            <a href="detail.html?id=${product.id} class="lead fw-normal mb-0">Click to view product</a>
+                            <p class="lead fw-normal mb-0">Go to product</p>
                           </div>
                         </div>
+                        </div>
+
                                    `;
     
     totalPrice += parseInt(product.price); 
     totalContainer.innerHTML = `        <div class="card mb-5">
-                                            <div class="card-body p-4">
+                                            <div class="card-body p-4" style="background-color: #D3B9AA">
 
-                                        <div class="float-end">
+                                        <div class="float-end" >
                                             <p class="mb-0 me-5 d-flex align-items-center">
-                                        <span class="small text-muted me-2">Order total:</span> 
+                                        <span class="lead fw-normal">Order total:</span> 
                                         <span class="lead fw-normal">${totalPrice}kr</span>
                                             </p>
                                             </div>
