@@ -18,18 +18,14 @@
     color: $color-primary;
     font-style: italic;
 
-    a {
-        color: white !important;
-    }
-
     .nav-item {
         list-style: none;
     }
 
+    a {
+        color: white !important;
+    }
 }
-
-
-
 
 
 
@@ -41,18 +37,13 @@
         justify-content: center;
         text-decoration: none;
 
-       
-
-    }
-
-    .banner ul {
-        list-style: none;
-
+        .banner ul {
+            list-style: none;
+    
+        }
     }
 
     
-
-
 }
 
 

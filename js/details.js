@@ -38,7 +38,7 @@ async function fetchDetails() {
                                 <div class="product">
                                     <img src="${specifics.image.url}" class="product-image"/>
                                 <div class="text">
-                                    <h2>${specifics.title}</h2>
+                                    <h1>${specifics.title}</h1>
                                     <h3>${specifics.price} kr</h3>
                                     <p>${specifics.description}</p>
                                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
@@ -55,8 +55,6 @@ async function fetchDetails() {
         button.addEventListener("click", handleClick);
                             
         });
-
-
 }
 
     catch(error) {
@@ -68,9 +66,6 @@ async function fetchDetails() {
 fetchDetails()
 
 
-
-
-
 function handleClick() {
 
     const title = this.dataset.title;
@@ -78,10 +73,7 @@ function handleClick() {
     const description = this.dataset.description;
     const image = this.dataset.image;
 
-
-
     const currentProducts = getExistingProducts();
-
 
     const productExists = currentProducts.find(function(fav) {
         return fav.id === id;
@@ -104,8 +96,6 @@ function handleClick() {
         event.target.innerHTML = "Add to cart";
 
     }
-  
-
 }
 
 

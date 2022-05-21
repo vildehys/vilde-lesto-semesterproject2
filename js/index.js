@@ -57,7 +57,7 @@ async function featuredProducts() {
                                                     <div class="featured_text">
                                                     <h2>${products[i].title}<h2>
                                                     <p>${products[i].description}<p>
-                                                    <h6>${products[i].price}kr<h6>
+                                                    <h2>${products[i].price}kr<h2>
                                                     <div class="button">
                                                     <a class="button read-button" href="detail.html?id=${products[i].id}">Read</a>
                                                     </div>

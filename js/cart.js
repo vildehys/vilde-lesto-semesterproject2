@@ -45,7 +45,7 @@ productsInCart.forEach((product) => {
                           <div class="col-md-2 d-flex justify-content-center">
                           <div>
                             <p class="small text-muted mb-4 pb-2">Product</p>
-                            <p class="lead fw-normal mb-0">Go to product</p>
+                            <a href="detail.html?id=${product.id}" class="lead fw-normal mb-0">Go to product</p>
                           </div>
                         </div>
                         </div>

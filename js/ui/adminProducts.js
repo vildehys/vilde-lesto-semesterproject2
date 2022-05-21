@@ -11,8 +11,10 @@ export function adminProducts(productsForAdmin) {
                                         <h2>ENVIRON À PARIS</h2>
                                         <h3>${product.title}</h3>
                                         <p>${product.price} kr</p>
+                                        <div class="button">
                                         <a class="button read-button" href="edit-product.html?id=${product.id}">Edit Product</a>
                                         </div
+                                        </div>
                                         </div>`;
 
     

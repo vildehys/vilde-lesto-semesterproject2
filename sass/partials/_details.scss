@@ -1,24 +1,12 @@
-h2 {
-    font-size: 26px;
-}
 
-h3 {
-    font-size: 18px;
-}
-
-p {
-    font-size: 13px;
-
-}
-
-.container{
+.container {
     margin-top: 100px;
-
 }
 
 .product {
     max-width: 720px;
     margin: 0 auto;
+    }
 
     .product-image {
         height: 350px;
@@ -32,28 +20,13 @@ p {
         margin-bottom: 50px;
     }
 
-
-
-
-}
-
-
-.description {
-    max-width: 720px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-
-}
-
-
-
-
-
-
-
-
-
+    .description {
+        max-width: 720px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    
+    }
 
 
 @media (min-width: 992px)

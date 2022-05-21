@@ -5,12 +5,10 @@ import { productsUrl } from "../../data/api.js";
 
 const form = document.querySelector("form");
 const title = document.querySelector("#title");
-const titleError = document.querySelector("#titleError");
 const price = document.querySelector("#price");
-const priceError = document.querySelector("#priceError");
 const description = document.querySelector("#description");
-const descriptionError = document.querySelector("#descriptionError");
 const messageContainer = document.querySelector(".message-container");
+const imageURL = document.querySelector("#image");
 
 
 form.addEventListener("submit", submitForm);
@@ -19,6 +17,7 @@ function submitForm(event) {
     event.preventDefault();
 
     messageContainer.innerHTML = "";
+
 
     const titleValue = title.value.trim();
     const priceValue = parseFloat(price.value);
@@ -39,6 +38,9 @@ async function addProduct(title, price, description) {
     const url = productsUrl;
     const data = JSON.stringify({ title: title, price: price, description: description });
     const token = getToken();
+
+    let checkbox = document.querySelector('input[type="checkbox"]:checked');
+
 
     const options = {
         method: "POST",
