@@ -40,6 +40,7 @@ function submitForm(event) {
 }
 
 async function addProduct(title, price, description, image, featured) {
+    
     const url = productsUrl;
     const data = JSON.stringify({ title: title, price: price, description: description, image_url: image, featured: featured });
     const token = getToken();
