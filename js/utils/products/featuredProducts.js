@@ -13,7 +13,7 @@ export async function featuredProducts() {
             if(products[i].featured === true) {
                 featuredContainer.innerHTML += `<div class="featured_products">
                                                     <div class="featured_product">
-                                                      <img src=${products[i].image.url} class="product-image"/>
+                                                      <img src=${products[i].image_url} class="product-image"/>
                                                     <div class="featured_text">
                                                       <h2>${products[i].title}<h2>
                                                       <p>${products[i].description}<p>

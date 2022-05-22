@@ -8,8 +8,8 @@ const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const messageContainer = document.querySelector(".message-container");
-const imageURL = document.querySelector("#image");
-
+const featured = document.querySelector("#featured");
+const imageUrl = document.querySelector("#new-image-url");
 
 form.addEventListener("submit", submitForm);
 
@@ -22,24 +22,28 @@ function submitForm(event) {
     const titleValue = title.value.trim();
     const priceValue = parseFloat(price.value);
     const descriptionValue = description.value.trim();
+    const imageValue = imageUrl.value;
+    const featuredValue = featured.value;
 
-    console.log("priceValue", priceValue)
+
+    console.log("imageValue", imageValue)
 
     if(titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
         return displayMessage("warning", "Please supply proper values", ".message-container");
     }
 
-    addProduct(titleValue, priceValue, descriptionValue);
+
+
+    addProduct(titleValue, priceValue, descriptionValue, imageValue, featuredValue);
 
 
 }
 
-async function addProduct(title, price, description) {
+async function addProduct(title, price, description, image, featured) {
     const url = productsUrl;
-    const data = JSON.stringify({ title: title, price: price, description: description });
+    const data = JSON.stringify({ title: title, price: price, description: description, image_url: image, featured: featured });
     const token = getToken();
 
-    let checkbox = document.querySelector('input[type="checkbox"]:checked');
 
 
     const options = {

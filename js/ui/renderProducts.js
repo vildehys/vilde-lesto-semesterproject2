@@ -7,7 +7,7 @@ export function renderProducts(productsToRender) {
     productsToRender.forEach(function(product) {
       productsContainer.innerHTML += `<div class="products">
 
-                                        <img src=${product.image.url}>  
+                                        <img src=${product.image_url}>  
                                         <h2>ENVIRON À PARIS</h2>
                                         <h3>${product.title}</h3>
                                         <div class="inline">      

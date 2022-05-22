@@ -36,14 +36,14 @@ async function fetchDetails() {
 
     detailsContainer.innerHTML = `
                                 <div class="product">
-                                    <img src="${specifics.image.url}" class="product-image"/>
+                                    <img src="${specifics.image_url}" class="product-image"/>
                                 <div class="text">
                                     <h1>${specifics.title}</h1>
                                     <h3>${specifics.price} kr</h3>
                                     <p>${specifics.description}</p>
                                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
                                 <div class="button">
-                                    <button class="button cta-cart ${cssClass}" data-id="${specifics.id}" data-title="${specifics.title}" data-price="${specifics.price}" data-description="${specifics.description}" data-image="${specifics.image.url}">${btnText}</button>
+                                    <button class="button cta-cart ${cssClass}" data-id="${specifics.id}" data-title="${specifics.title}" data-price="${specifics.price}" data-description="${specifics.description}" data-image="${specifics.image_url}">${btnText}</button>
                                         </div>
                                     </div>
                                 </div>

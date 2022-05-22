@@ -115,6 +115,11 @@
   font-size: 12px;
 }
 
+.checkbox-container {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
 .hero-img {
   background-size: contain;
   width: 100%;
