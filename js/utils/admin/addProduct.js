@@ -23,7 +23,7 @@ function submitForm(event) {
     const priceValue = parseFloat(price.value);
     const descriptionValue = description.value.trim();
     const imageValue = imageUrl.value;
-    const featuredValue = featured.value;
+    const featuredChecked = featured.checked;
 
 
     console.log("imageValue", imageValue)
@@ -34,7 +34,7 @@ function submitForm(event) {
 
 
 
-    addProduct(titleValue, priceValue, descriptionValue, imageValue, featuredValue);
+    addProduct(titleValue, priceValue, descriptionValue, imageValue, featuredChecked);
 
 
 }
