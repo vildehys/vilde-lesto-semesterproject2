@@ -10,12 +10,13 @@ const id = params.get("id");
 const url = productsUrl + id;
 
 const form = document.querySelector("form");
-const name = document.querySelector("#title");
+const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const idInput = document.querySelector("#id");
 const message = document.querySelector(".message-container");
-
+const featured = document.querySelector("#featured");
+const imageUrl = document.querySelector("#new-image-url");
 
 (async function() {
     try {
@@ -56,6 +57,8 @@ function submitForm(event) {
     const priceValue = parseFloat(price.value);
     const descriptionValue = description.value.trim();
     const idValue = idInput.value;
+    const imageValue = imageUrl.value;
+    const featuredChecked = featured.checked;
 
     if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
         console.log("validation");
@@ -64,14 +67,14 @@ function submitForm(event) {
 
     }
 
-    updateProduct (titleValue, priceValue, descriptionValue, idValue);
+    updateProduct (titleValue, priceValue, descriptionValue, idValue, imageValue, featuredChecked);
 
 }
 
-async function updateProduct(title, price, description, id) {
+async function updateProduct(title, price, description, id, image, featured) {
 
     const url = productsUrl + id;
-    const data = JSON.stringify({ title: title, price: price, description: description });
+    const data = JSON.stringify({ title: title, price: price, description: description, image_url: image, featured: featured });
 
     const token = getToken();
 
